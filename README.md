@@ -15,21 +15,25 @@ It includes:
 
 ## Folder Structure
 
+```
 identity-automation-python/
 │
-├── requirements.txt        # Python dependencies
+├── requirements.txt
 │
-├── auth/                   # Authentication logic
+├── auth/
 │   └── graph_auth.py
 │
-├── users/                  # User automation scripts
+├── users/
 │   └── list_users.py
 │
-├── groups/                 # Group automation scripts
+├── groups/
 │   └── list_groups.py
 │
-└── utils/                  # Helper utilities
-    └── csv_writer.py
+└── utils/
+└── csv_writer.py
+
+```
+
 
 ## Authentication Setup
 
@@ -37,16 +41,18 @@ This project uses MSAL (Microsoft Authentication Library) with OAuth2 client cre
 
 You will need:
 
-- Tenant ID
-- Client ID
-- Client Secret
-- A registered app in Entra ID with Microsoft Graph permissions
+- Tenant ID  
+- Client ID  
+- Client Secret  
+- A registered app in Entra ID with Microsoft Graph permissions  
 
 Create a `.env` file in your local environment:
 
 TENANT_ID=your-tenant-id
 CLIENT_ID=your-client-id
 CLIENT_SECRET=your-client-secret
+
+
 
 Do not commit your `.env` file to GitHub.
 
@@ -56,19 +62,25 @@ Install dependencies:
 
 pip install -r requirements.txt
 
+
+
 ## Running Scripts
 
 List all Entra ID users:
 
 python users/list_users.py
 
-Exports: users.csv
+
+
+Exports: `users.csv`
 
 List all Entra ID groups:
 
 python groups/list_groups.py
 
-Exports: groups.csv
+
+
+Exports: `groups.csv`
 
 ## Roadmap
 
@@ -80,6 +92,3 @@ Planned modules include:
 - Authentication strength reporting
 - Autopilot device queries
 
-## License
-
-MIT License
